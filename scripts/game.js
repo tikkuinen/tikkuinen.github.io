@@ -7,12 +7,12 @@ const MEDIUMRESULT = "You did very well, here's a big piece of cake for you ";
 const POORRESULT = "Too bad, you need more practice. You can have a small piece of cake!";
 
 // Kuvat 
-const YES = '<img src="../sivusto/images/yes.png" alt="correct" class="img-fluid">';
-const NO = '<img src="../sivusto/images/no.png" alt="wrong" class="img-fluid">';
+const YES = '<img src="images/yes.png" alt="correct" class="img-fluid">';
+const NO = '<img src="images/no.png" alt="wrong" class="img-fluid">';
 
-const SMALLCAKE = '<img src="../sivusto/images/smallcake.png" alt="small_cake" class="img-fluid">';
-const MEDIUMCAKE = '<img src="../sivusto/images/mediumcake.png" alt="medium_cake" class="img-fluid">';
-const BIGCAKE = '<img src="../sivusto/images/bigcake.png" alt="big_cake" class="img-fluid">';
+const SMALLCAKE = '<img src="images/smallcake.png" alt="small_cake" class="img-fluid">';
+const MEDIUMCAKE = '<img src="images/mediumcake.png" alt="medium_cake" class="img-fluid">';
+const BIGCAKE = '<img src="images/bigcake.png" alt="big_cake" class="img-fluid">';
 
 // haettu W3Schools-sivustolta 22.4.2022 https://www.w3schools.com/JS/js_random.asp
 function getRndInteger(min, max) {
