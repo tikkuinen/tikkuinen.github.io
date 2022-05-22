@@ -1,19 +1,9 @@
-// Ensimmäisellä sivun latauksella haetaan fakta, ja jos merkkimäärä on liian pitkä, haetaan uudelleen.
-getApi();
-
-function getApi() {
-    fetch('http://numbersapi.com/random/trivia?json')
-        .then(response => response.json())
-        .then(data => {
-            let apiText = data.text;
-            
-            if (apiText.length < 100) {
-                document.getElementById('api-here').innerHTML = apiText;
-            } else {
-                getApi();
-            }
-        });    
-}
-
-
-// siivoa jos et laita nappia ja katso tuo merkkimäärä kuntoon
+// Haetaan päivämäärä, ja APIn kautta tulee päivän numero ja sama roomalaisin numeroin
+fetch('https://api.math.tools/numbers/nod')
+    .then(response => response.json())
+    .then(data => {
+        let date = new Date();
+        document.getElementById('api-here').innerHTML = date.toLocaleDateString('en-US') + "<br>" + 
+        data.contents.nod.numbers.number + "<br>" +
+        data.contents.nod.numbers.numerals.roman.value;
+    });
